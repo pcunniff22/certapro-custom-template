@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boston House Painters | Professional Painting Services</title>
+    <meta name="description" content="CertaPro Painters® of Boston, MA provides superior house &amp; commercial painting services.">
+    <style>
+      :root {
+        --primary: #000;
+        --secondary: #038;
+        --accent: #fff;
+        --text: #333;
+        --light: #f8f9fa;
+      }
+      
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      
+      body {
+        font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        line-height: 1.6;
+        color: var(--text);
+      }
+      
+      .header {
+        background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+        color: white;
+        padding: 1rem 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+      }
+      
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .logo {
+        font-size: 1.6rem;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+      }
+      
+      .phone-header a {
+        color: var(--secondary);
+        text-decoration: none;
+        font-size: 1.3rem;
+        font-weight: 700;
+      }
+      
+      .hero {
+        background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+        color: white;
+        padding: 140px 0 100px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/></svg>');
+        background-size: 60px;
+        opacity: 0.5;
+      }
+      
+      .hero-content {
+        position: relative;
+        z-index: 1;
+      }
+      
+      .hero h1 {
+        font-size: 3.5rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        line-height: 1.1;
+      }
+      
+      .hero-subtitle {
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+        opacity: 0.95;
+      }
+      
+      .trust-badges {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 2.5rem;
+        flex-wrap: wrap;
+      }
+      
+      .badge {
+        background: rgba(255,255,255,0.15);
+        backdrop-filter: blur(10px);
+        padding: 0.6rem 1.2rem;
+        border-radius: 50px;
+        font-size: 0.95rem;
+        border: 1px solid rgba(255,255,255,0.2);
+      }
+      
+      .cta-button {
+        display: inline-block;
+        background: var(--secondary);
+        color: var(--primary);
+        padding: 1.2rem 3rem;
+        font-size: 1.2rem;
+        font-weight: 700;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      }
+      
+      .cta-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+      }
+      
+      .services {
+        padding: 100px 0;
+        background: var(--light);
+      }
+      
+      .section-title {
+        text-align: center;
+        font-size: 2.8rem;
+        color: var(--primary);
+        margin-bottom: 3rem;
+        font-weight: 700;
+      }
+      
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+      }
+      
+      .service-card {
+        background: white;
+        padding: 2.5rem;
+        border-radius: 16px;
+        text-align: center;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+        border: 1px solid rgba(0,0,0,0.05);
+      }
+      
+      .service-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+      }
+      
+      .service-icon {
+        font-size: 3.5rem;
+        margin-bottom: 1.5rem;
+      }
+      
+      .service-card h3 {
+        color: var(--primary);
+        margin-bottom: 0.8rem;
+        font-size: 1.3rem;
+      }
+      
+      .testimonials {
+        padding: 100px 0;
+        background: white;
+      }
+      
+      .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+      
+      .testimonial {
+        background: var(--light);
+        padding: 2rem;
+        border-radius: 16px;
+        border-left: 4px solid var(--secondary);
+      }
+      
+      .stars {
+        color: var(--secondary);
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+      }
+      
+      .contact-section {
+        padding: 100px 0;
+        background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+        color: white;
+      }
+      
+      .contact-section .section-title {
+        color: white;
+      }
+      
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: start;
+      }
+      
+      .contact-info h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+      
+      .contact-info p {
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+      }
+      
+      .contact-form {
+        background: white;
+        padding: 2.5rem;
+        border-radius: 16px;
+        color: var(--text);
+      }
+      
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+      
+      .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: var(--primary);
+      }
+      
+      .form-group input,
+      .form-group textarea,
+      .form-group select {
+        width: 100%;
+        padding: 1rem;
+        border: 2px solid #e0e0e0;
+        border-radius: 8px;
+        font-size: 1rem;
+        transition: border-color 0.2s;
+      }
+      
+      .form-group input:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: var(--primary);
+      }
+      
+      .submit-button {
+        width: 100%;
+        background: var(--primary);
+        color: white;
+        padding: 1.2rem;
+        border: none;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      
+      .submit-button:hover {
+        background: var(--accent);
+        transform: translateY(-2px);
+      }
+      
+      .footer {
+        background: var(--primary);
+        color: white;
+        padding: 2rem 0;
+        text-align: center;
+      }
+      
+      @media (max-width: 768px) {
+        .hero h1 { font-size: 2.2rem; }
+        .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+        .trust-badges { flex-direction: column; }
+      }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Boston House Painters</div>
+                <div class="phone-header">
+                    <a href="tel:617-477-2468">617-477-2468</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Professional Painting Services You Can Trust</h1>
+            <p class="hero-subtitle">CertaPro Painters® of Boston, MA provides superior house &amp; commercial painting services.</p>
+            <div class="trust-badges">
+                <span class="badge">✓ Licensed & Insured</span>
+                <span class="badge">✓ Free Estimates</span>
+                <span class="badge">✓ Quality Guaranteed</span>
+            </div>
+            <a href="#contact" class="cta-button">Get Your Free Quote</a>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                
+      <div class="service-card" style="animation-delay: 0s">
+        <div class="service-icon">🏠</div>
+        <h3>Interior Painting</h3>
+        <p>Transform your living spaces with fresh, vibrant colors and expert craftsmanship.</p>
+      </div>
+    
+      <div class="service-card" style="animation-delay: 0.1s">
+        <div class="service-icon">🏢</div>
+        <h3>Exterior Painting</h3>
+        <p>Boost curb appeal and protect your home with premium exterior paints.</p>
+      </div>
+    
+      <div class="service-card" style="animation-delay: 0.2s">
+        <div class="service-icon">🏡</div>
+        <h3>Residential Painting</h3>
+        <p>Complete painting solutions for homeowners, from single rooms to whole houses.</p>
+      </div>
+    
+      <div class="service-card" style="animation-delay: 0.30000000000000004s">
+        <div class="service-icon">🏭</div>
+        <h3>Commercial Painting</h3>
+        <p>Professional painting for offices, retail spaces, and commercial properties.</p>
+      </div>
+    
+      <div class="service-card" style="animation-delay: 0.4s">
+        <div class="service-icon">💦</div>
+        <h3>Power Washing</h3>
+        <p>Remove dirt, grime, and mildew to prepare surfaces for painting.</p>
+      </div>
+    
+      <div class="service-card" style="animation-delay: 0.5s">
+        <div class="service-icon">🔨</div>
+        <h3>Drywall Repair</h3>
+        <p>Expert drywall repair and finishing for a smooth, flawless surface.</p>
+      </div>
+    
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="testimonials-grid">
+                
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>"width=device-width, initial-scale=1, minimum-scale=1.0, user-scalable=no"</p>
+      </div>
+    
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>"/wp-content/themes/certapro/images/Favicon_Final_R_SMALL.png"</p>
+      </div>
+    
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>"https://cmp.osano.com/BmDUmYVubz/ad89845a-b53b-49fa-8dd6-b788015a5abd/osano.js"</p>
+      </div>
+    
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get Your Free Estimate</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Boston House Painters</h3>
+                    <p>📞 <a href="tel:617-477-2468" style="color: var(--secondary); text-decoration: none; font-weight: 600;">617-477-2468</a></p>
+                    <p>✉️ rcarmosino@certapro.com</p>
+                    <p>📍 1660 Soldiers Field Road, Suite 200</p>
+                    <p style="margin-top: 2rem;">Ready to transform your space? Contact us today for a free, no-obligation estimate.</p>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label>Your Name *</label>
+                            <input type="text" required placeholder="John Smith">
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number *</label>
+                            <input type="tel" required placeholder="(555) 123-4567">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" placeholder="john@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Service Needed</label>
+                            <select>
+                                <option>Select a service...</option>
+                                <option>Interior Painting</option><option>Exterior Painting</option><option>Residential Painting</option><option>Commercial Painting</option><option>Power Washing</option><option>Drywall Repair</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Project Details</label>
+                            <textarea rows="4" placeholder="Tell us about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Request Free Estimate</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Boston House Painters. All rights reserved. | Licensed & Insured</p>
+        </div>
+    </footer>
+</body>
+</html>

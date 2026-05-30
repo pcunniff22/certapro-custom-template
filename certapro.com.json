@@ -1,0 +1,39 @@
+{
+  "url": "https://certapro.com/boston",
+  "domain": "certapro.com",
+  "businessName": "Boston House Painters",
+  "tagline": "",
+  "services": [
+    "Interior Painting",
+    "Exterior Painting",
+    "Residential Painting",
+    "Commercial Painting",
+    "Power Washing",
+    "Drywall Repair"
+  ],
+  "phone": "617-477-2468",
+  "email": "rcarmosino@certapro.com",
+  "address": "1660 Soldiers Field Road, Suite 200",
+  "colors": {
+    "primary": "#000",
+    "secondary": "#038",
+    "accent": "#fff"
+  },
+  "logo": null,
+  "images": [
+    "https://pub-9fc1f065f07e441b8f35365c774f09ae.r2.dev/uploads/sites/1558/2017/01/gmb.png",
+    "https://pub-9fc1f065f07e441b8f35365c774f09ae.r2.dev/uploads/sites/1558/2021/06/Logo1.png",
+    "https://pub-9fc1f065f07e441b8f35365c774f09ae.r2.dev/uploads/sites/1558/2024/01/LSR-Logo.jpg",
+    "https://pub-9fc1f065f07e441b8f35365c774f09ae.r2.dev/uploads/sites/1558/2024/03/Achievement-Club-Certificate-2020-1-1.jpg",
+    "/wp-content/themes/certapro/images/zee-home-res.jpg",
+    "/wp-content/themes/certapro/images/zee-home-com.jpg"
+  ],
+  "testimonials": [
+    "width=device-width, initial-scale=1, minimum-scale=1.0, user-scalable=no",
+    "/wp-content/themes/certapro/images/Favicon_Final_R_SMALL.png",
+    "https://cmp.osano.com/BmDUmYVubz/ad89845a-b53b-49fa-8dd6-b788015a5abd/osano.js"
+  ],
+  "about": "CertaPro Painters® of Boston, MA provides superior house &amp; commercial painting services.",
+  "hours": "",
+  "social": {}
+}
